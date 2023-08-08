@@ -1,0 +1,24 @@
+import numpy as np
+
+def gradient_check(weights, f, f_dervative):
+    gradients = f_dervative(weights)
+
+    eps = 1e-4
+
+    for idx in range(len(weights)):
+        weights[idx] -= eps
+        cost1 = f(weights)
+
+        weights[idx] += 2 * eps
+        cost2 = f(weights)
+
+        weights[idx] -= eps  
+
+        gradient1 = gradients[idx]
+        gradient2 = (cost2 - cost1) / (2 * eps)
+
+        if not np.isclose(gradient1, gradient2, atol=0.001):
+            print(f'{gradient1} vs {gradient2}')
+            return False
+
+    return True

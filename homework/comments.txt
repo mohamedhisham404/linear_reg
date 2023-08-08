@@ -1,0 +1,19 @@
+=============p2=============
+* the minimum error i achieved when step_size = 0.01 and precision = 0.0001
+with cost 0.0035134298680330996
+Number of iterations ended at 2517
+
+=============p3=============
+if the increasing in iterations dose not decrese cost that means we do not need more iterations
+
+=============p4=============
+the cost jump to big numbers after few iterations
+after using scikit StandardScaler (Number of iterations ended at 110 - with cost 0.04870436218279925)
+
+=============p5=============
+feat1 seems really came from a line
+
+=============p6=============
+the optimal weights [0.12060381 0.6338432  0.20894728 0.00150253]
+The cost is 0.0020971589652777674
+
